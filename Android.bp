@@ -18,3 +18,16 @@ cc_binary {
     name: "demoservice",
     tags: ["optional"],
 }
+
+test_src = [
+    "test.cpp",
+    "aidl/qsbl/IDemoService.aidl",
+]
+
+cc_binary {
+    srcs: test_src,
+    shared_libs: shared_libs,
+    cflags: ["-DLOG_TAG=\"DemoServiceTest\""],
+    name: "test-demo-service",
+    tags: ["optional"],
+}
