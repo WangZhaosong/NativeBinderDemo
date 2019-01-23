@@ -2,6 +2,7 @@
 Android binder demo using c++
 
 ## File struture
+```
 .
 ├── aidl
 │   └── qsbl
@@ -14,6 +15,7 @@ Android binder demo using c++
 │       └── IDemoService.h
 ├── LICENSE
 └── README.md
+```
 
 * aidl
 

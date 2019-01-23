@@ -1,0 +1,20 @@
+src = [
+    "main.cpp",
+    "DemoService.cpp",
+    "aidl/qsbl/IDemoService.aidl",
+]
+
+shared_libs = [
+    "libbase",
+    "libutils",
+    "libbinder",
+    "liblog",
+]
+
+cc_binary {
+    srcs: src,
+    shared_libs: shared_libs,
+    cflags: ["-DLOG_TAG=\"DemoService\""],
+    name: "demoservice",
+    tags: ["optional"],
+}
